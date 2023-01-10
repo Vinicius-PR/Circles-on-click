@@ -16,7 +16,7 @@ To do it, I used the main concepts of React, that are State and Immutability.
 * JavaScript
 
 ## ScreenShot
-[Home page](screenshot.png)
+![Home page](screenshot.png)
 
 ## How can I use it?
 
