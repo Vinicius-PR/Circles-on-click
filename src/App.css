@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  padding: 0.5rem;
+  z-index: 1;
+}
+
+button {
+  height: 2rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 8px;
+  border: none;
+  border: 1px solid transparent;
+  background-color: rgb(245, 213, 108);
+  cursor: pointer;
+}
+
+button:not(:disabled):hover {
+  border: 1px solid black;
+}
+
+.input_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.input_field {
+  width: 4rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.circles_area {
+  flex: 1;
+}
+
+.circle {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
