@@ -18,17 +18,21 @@ function App() {
   }
 
   function handleUndo() {
-    const coordinateUndo = coordinates.pop()
-    if (coordinateUndo === undefined)
+    const newCoordinates = [...coordinates]
+    const singleUndoCoordinate = newCoordinates.pop()
+    if (singleUndoCoordinate === undefined)
       return
-    setUndoCoordinates([...undoCoordinates, coordinateUndo])
+    setCoordinates(newCoordinates)
+    setUndoCoordinates([...undoCoordinates, singleUndoCoordinate])
   }
 
   function handleRedo() {
-    const coordinateRedo = undoCoordinates.pop()
-    if (coordinateRedo === undefined)
+    const newUndoCoordinates = [...undoCoordinates]
+    const singleRedoCoordinate = newUndoCoordinates.pop()
+    if (singleRedoCoordinate === undefined)
       return
-    setCoordinates([...coordinates, coordinateRedo])
+    setCoordinates([...coordinates, singleRedoCoordinate])
+    setUndoCoordinates(newUndoCoordinates)
   }
 
   return (
