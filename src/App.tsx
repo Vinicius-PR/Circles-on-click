@@ -13,8 +13,8 @@ function App() {
   const [colorCircle, setColorCircle] = useState('#1cb51c')
 
   function handleOnClick(e: React.MouseEvent<HTMLElement>) {
-    const {pageX, pageY} = e
-    setCoordinates([...coordinates, {pageX, pageY}])
+    const { pageX, pageY } = e
+    setCoordinates([...coordinates, { pageX, pageY }])
   }
 
   function handleUndo() {
@@ -41,23 +41,23 @@ function App() {
         <button disabled={coordinates.length === 0} onClick={handleUndo}>Undo</button>
         <div className='input_box'>
           <label htmlFor="diameter">Diameter of the circle</label>
-          <input 
-            className='input_field' 
-            name='diameter' 
+          <input
+            className='input_field'
+            name='diameter'
             type="number"
             value={diameter}
-            onChange={(e) => setDiameter(Number(e.target.value))} 
+            onChange={(e) => setDiameter(Number(e.target.value))}
           />
         </div>
 
         <div className='input_box'>
           <label htmlFor="color">Color of the circle</label>
-          <input 
-            className='input_field' 
-            name='color' 
+          <input
+            className='input_field'
+            name='color'
             type="color"
             value={colorCircle}
-            onChange={(e) => setColorCircle(e.target.value)} 
+            onChange={(e) => setColorCircle(e.target.value)}
           />
         </div>
         <button disabled={undoCoordinates.length === 0} onClick={handleRedo}>Redo</button>
@@ -66,9 +66,9 @@ function App() {
         {
           coordinates.map((coordinate, index) => {
             return (
-              <div 
+              <div
                 key={index}
-                className = 'circle'
+                className='circle'
                 style={{
                   width: `${diameter}px`,
                   height: `${diameter}px`,

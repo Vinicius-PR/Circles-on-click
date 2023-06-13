@@ -13,6 +13,7 @@ main {
 header {
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
   align-items: center;
   border: 1px solid black;
   padding: 0.5rem;
@@ -48,10 +49,23 @@ button:not(:disabled):hover {
 
 .circles_area {
   flex: 1;
+  border: 2px solid green;
 }
 
 .circle {
   position: absolute;
   transform: translate(-50%, -50%);
   border-radius: 50%;
+}
+
+@media (max-width: 375px) {
+  header {
+    justify-content: center;
+    flex-direction: column;
+    font-size: 0.8rem;
+  }
+
+  .input_field {
+    font-size: 0.8rem;
+  }
 }
